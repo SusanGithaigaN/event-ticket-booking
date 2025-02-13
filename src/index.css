@@ -1,0 +1,11 @@
+/* .accentBg{
+  background-color: #0E464F;
+  background-color: #02191D;
+} */
+.ticket-card{
+  background-image: url("./assets/ticket-bg.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* height: 100%; */
+}

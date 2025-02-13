@@ -1,35 +1,29 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router';
 import './App.css';
+import Navbar from './components/Navbar';
+import Events from './components/Events'
+import Tickets from './components/Tickets'
+import About from './components/About'
 
-function Navbar() {
+function Footer() {
   return (
-    <nav>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-      </ul>
-    </nav>
-  );
+    <div className="flex flex-row justify-center text-sm text-white bg-[#02191D] py-4">
+      Coded by <a href="https://github.com/SusanGithaigaN"> <span className='pl-1.5 text-blue-500'>Susan Githaiga</span></a>.
+    </div>
+  )
 }
-
-function Home() {
-  return <h1>Home Page</h1>;
-}
-
-function About() {
-  return <h1>About Page</h1>;
-}
-
 function App() {
   return (
     <Router>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Events />} />
+        <Route path="/tickets" element={<Tickets />} />
         <Route path="/about" element={<About />} />
       </Routes>
+      <Footer />
     </Router>
-  ); 
+  );
 }
 
 export default App;
