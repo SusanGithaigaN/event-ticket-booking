@@ -3,7 +3,7 @@ import mail from '../assets/mail-svgrepo-com.svg';
 
 export default function Tickets() {
     return (
-        <div className="min-h-screen flex items-center justify-center bg-[#02191D] px-4 md:px-0">
+        <div className="min-h-screen flex items-center justify-center bg-[#02191D] px-4 md:px-0 pt-4 md:pt-0">
             <div className="w-full max-w-md bg-transparent text-white border-2 border-[#0E464F] rounded-xl p-6 shadow-xl">
                 {/* Header */}
                 <div className="flex justify-between items-center mb-6">
@@ -21,8 +21,8 @@ export default function Tickets() {
                 <div className='border-2 border-[#0E464F] rounded-2xl p-6'>
                     <div className='border-2 border-[#0E464F] rounded-2xl p-4'>
                         <div className="p-4 rounded-lg mb-6">
-                            <label className="block text-sm font-medium mb-2 text-gray-30 pb-2">Upload Profile Photo</label>
-                            <div className="flex items-center justify-center h-full py-4 bg-[#030b0c]">
+                            <label className="block text-sm font-medium mb-2 text-gray-300 py-4">Upload Profile Photo</label>
+                            <div className="flex items-center justify-center h-28 py-4 bg-[#030b0c]">
                                 <div className="flex flex-col items-center justify-center border-4 border-[#24A0B5] rounded-2xl w-38 p-6 cursor-pointer bg-[#0E464F]">
                                     <img src={uploads} className="h-6 mb-2" />
                                     <p className="text-sm text-white text-center">Drag & drop or click to upload</p>
@@ -33,7 +33,7 @@ export default function Tickets() {
                 </div>
 
                 {/* Form Inputs */}
-                <form className="space-y-4">
+                <form className="space-y-8 pt-6">
                     <div>
                         <label htmlFor="name" className="block text-sm font-medium">
                             Enter your name

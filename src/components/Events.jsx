@@ -1,6 +1,6 @@
 export default function Events() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-[#02191D] px-4 md:px-0">
+    <div className="min-h-screen flex items-center justify-center bg-[#02191D] px-4 md:px-0 pt-4 md:pt-0">
       <div className="w-full max-w-md text-white border-2 border-[#0E464F] rounded-xl p-6 shadow-lg">
         {/* Header */}
         <div className="flex justify-between items-center mb-2">
@@ -36,18 +36,18 @@ export default function Events() {
             Select Ticket Type:
           </label>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div className="border-2 border-[#0E464F] rounded-lg p-4 text-left sm:text-center hover:bg-[#0E464F] cursor-pointer">
+            <div className="border-2 border-[#197686] rounded-lg p-4 text-left sm:text-center hover:bg-[#2C545B] cursor-pointer">
               <p className="text-lg font-bold py-2">Free</p>
               <p className="text-xs text-gray-400">REGULAR ACCESS</p>
               <p className="text-xs mt-1">20/02</p>
             </div>
 
-            <div className="border-2 border-[#0E464F] rounded-lg p-4 text-left sm:text-center hover:bg-[#0E464F] cursor-pointer">
+            <div className="border-2 border-[#197686] rounded-lg p-4 text-left sm:text-center hover:bg-[#2C545B] cursor-pointer">
               <p className="text-lg font-bold py-2">$150</p>
               <p className="text-xs text-gray-400">VIP ACCESS</p>
               <p className="text-xs mt-1">20/52</p>
             </div>
-            <div className="border-2 border-[#0E464F] rounded-lg p-4 text-left sm:text-center hover:bg-[#0E464F] cursor-pointer">
+            <div className="border-2 border-[#197686] rounded-lg p-4 text-left sm:text-center hover:bg-[#2C545B] cursor-pointer">
               <p className="text-lg font-bold py-2">$150</p>
               <p className="text-xs text-gray-400">VIP ACCESS</p>
               <p className="text-xs mt-1">20/52</p>

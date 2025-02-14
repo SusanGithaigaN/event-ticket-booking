@@ -37,12 +37,14 @@ export default function Navbar() {
                     {/* Logo and Navigation Links */}
                     <div className="flex flex-1 items-center justify-center sm:items-center sm:justify-center">
                         {/* Logo */}
-                        <div className="flex items-center space-x-4">
-                            <img
-                                src={logo}
-                                alt="Logo"
-                                className="h-10 w-25 rounded-full"
-                            />
+                        <div className="flex items-center space-x-16">
+                            <a href='/' className='text-dec'>
+                                <img
+                                    src={logo}
+                                    alt="Logo"
+                                    className="h-10 w-25 rounded-full"
+                                />
+                            </a>
 
                             {/* Navigation Links */}
                             <div className="hidden sm:ml-6 sm:block">
@@ -69,7 +71,7 @@ export default function Navbar() {
 
                     {/* Top-Right Button */}
                     <div className="absolute inset-y-0 right-0 flex items-center pr-4 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                        <button className="bg-white capitalize px-4 py-2 rounded-md text-sm font-thin hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2">
+                        <button className="bg-white capitalize px-4 py-2 rounded-md text-sm font-thin hover:bg-[#24A0B5] hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2">
                             My Tickets
                         </button>
                     </div>
@@ -78,7 +80,7 @@ export default function Navbar() {
 
             {/* Mobile Menu */}
             <DisclosurePanel className="sm:hidden">
-                <div className="space-y-1 px-2 pt-2 pb-3">
+                <div className="space-y-1 px-2 mx-4 pt-2 pb-3 bg-[#053e48] shadow-2xl rounded-md">
                     {navigation.map((item) => (
                         <DisclosureButton
                             key={item.name}

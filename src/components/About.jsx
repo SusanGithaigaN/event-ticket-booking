@@ -2,7 +2,7 @@ import Bar from '../assets/Bar Code.svg';
 
 export default function About() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-[#02191D] px-4 md:px-0">
+    <div className="min-h-screen flex items-center justify-center bg-[#02191D] px-4 md:px-0 pt-4 md:pt-0">
       <div className="w-full max-w-md  border-2 border-[#0E464F] text-white rounded-lg p-6 shadow-lg">
         {/* Header */}
         <div className="flex justify-between items-center mb-6">
