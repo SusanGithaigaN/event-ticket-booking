@@ -12,8 +12,8 @@ export default function About() {
 
         {/* Progress Bar */}
         <div className="flex flex-row w-full h-2 rounded-full mb-6">
-          <div className="bg-[#24A0B5] h-2 rounded-full" style={{ width: '86%' }}></div>
-          <div className="bg-[#0D4149] h-2 rounded-full" style={{ width: '14%' }}></div>
+          <div className="bg-[#24A0B5] h-2 rounded-l-full" style={{ width: '86%' }}></div>
+          <div className="bg-[#0D4149] h-2 rounded-r-full" style={{ width: '14%' }}></div>
         </div>
         <div className="text-center mb-6">
           <h2 className="text-xl font-semibold mb-2">Your Ticket is Booked!</h2>

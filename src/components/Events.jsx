@@ -1,4 +1,5 @@
 export default function Events() {
+  // state
   return (
     <div className="min-h-screen flex items-center justify-center bg-[#02191D] px-4 md:px-0 pt-4 md:pt-0">
       <div className="w-full max-w-md text-white border-2 border-[#0E464F] rounded-xl p-6 shadow-lg">
@@ -9,8 +10,8 @@ export default function Events() {
         </div>
         {/* Progress Bar */}
         <div className="flex flex-row w-full h-2 rounded-full mb-6">
-          <div className="bg-[#24A0B5] h-2 rounded-full" style={{ width: '33%' }}></div>
-          <div className="bg-[#0D4149] h-2 rounded-full" style={{ width: '67%' }}></div>
+          <div className="bg-[#24A0B5] h-2 rounded-l-full" style={{ width: '33%' }}></div>
+          <div className="bg-[#0D4149] h-2 rounded-r-full" style={{ width: '67%' }}></div>
         </div>
         {/* Event Details */}
         <div className="bg-[#09272D] p-4 rounded-xl shadow-xl mb-6">

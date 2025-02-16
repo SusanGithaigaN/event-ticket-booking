@@ -13,8 +13,8 @@ export default function Tickets() {
 
                 {/* Progress Bar */}
                 <div className="flex flex-row w-full h-2 rounded-full mb-6">
-                    <div className="bg-[#24A0B5] h-2 rounded-full" style={{ width: '66%' }}></div>
-                    <div className="bg-[#0D4149] h-2 rounded-full" style={{ width: '37%' }}></div>
+                    <div className="bg-[#24A0B5] h-2 rounded-l-full" style={{ width: '66%' }}></div>
+                    <div className="bg-[#0D4149] h-2 rounded-r-full" style={{ width: '37%' }}></div>
                 </div>
 
                 {/* Profile Photo Upload */}
