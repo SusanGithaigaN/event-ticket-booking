@@ -1,22 +1,24 @@
+import React from "react";
+import Button from "./common/Button";
+import Progress from "./common/Progress";
+import ProgressBar from './common/ProgressBar'
 import uploads from '../assets/upload-svgrepo-com.svg';
 import mail from '../assets/mail-svgrepo-com.svg';
 
 export default function Tickets() {
+    // buttons
+    const ticketBtns = [
+        { label: "Back", href: "/", variant: "secondary" },
+        { label: "Get My Free Ticket", href: "/about", variant: "primary" },
+    ]
     return (
         <div className="min-h-screen flex items-center justify-center bg-[#02191D] px-4 md:px-0 pt-4 md:pt-0">
             <div className="w-full max-w-md bg-transparent text-white border-2 border-[#0E464F] rounded-xl p-6 shadow-xl">
                 {/* Header */}
-                <div className="flex justify-between items-center mb-6">
-                    <h2 className="text-lg font-thin">Attendee Details</h2>
-                    <span className="text-sm text-gray-400">Step 2/3</span>
-                </div>
-
+                <Progress title="Attendee Details" step="Step 2/3" />
                 {/* Progress Bar */}
-                <div className="flex flex-row w-full h-2 rounded-full mb-6">
-                    <div className="bg-[#24A0B5] h-2 rounded-l-full" style={{ width: '66%' }}></div>
-                    <div className="bg-[#0D4149] h-2 rounded-r-full" style={{ width: '37%' }}></div>
-                </div>
-
+                <ProgressBar progress={[{ done: 66, rem: 37 }]} />
+                
                 {/* Profile Photo Upload */}
                 <div className='border-2 border-[#0E464F] rounded-2xl p-6'>
                     <div className='border-2 border-[#0E464F] rounded-2xl p-4'>
@@ -75,14 +77,7 @@ export default function Tickets() {
                 </form>
 
                 {/* Action Buttons */}
-                <div className="flex justify-between mt-6">
-                    <a href='/' className="w-32 lg:w-48 px-4 py-2 text-sm text-center text-gray-400 bg-transparent hover:bg-[#eaf8fb] border-1 border-[#24A0B5] rounded-lg">
-                        Back
-                    </a>
-                    <a href='/about' className="px-4 py-2 text-sm font-medium text-white bg-[#24A0B5] hover:bg-[#6ad0e2] rounded-lg">
-                        Get My Free Ticket
-                    </a>
-                </div>
+                <Button buttons={ticketBtns} />
             </div>
         </div>
     );

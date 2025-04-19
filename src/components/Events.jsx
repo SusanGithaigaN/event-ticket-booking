@@ -1,18 +1,28 @@
+import React from "react";
+import Button from "./common/Button";
+import Progress from "./common/Progress";
+import ProgressBar from './common/ProgressBar'
+
 export default function Events() {
-  // state
+  const buttonsGroup1 = [
+    { label: "Cancel", variant: "secondary", onClick: () => console.log("Cancel clicked") },
+    { label: "Next", href: "/tickets", variant: "primary" },
+  ];
+
+  // ticket categories
+  const ticketOptions = [
+    { price: "Free", access: "REGULAR ACCESS", availability: "20/02" },
+    { price: "$150", access: "VIP ACCESS", availability: "20/52" },
+    { price: "$150", access: "VIP ACCESS", availability: "20/52" },
+  ]
   return (
     <div className="min-h-screen flex items-center justify-center bg-[#02191D] px-4 md:px-0 pt-4 md:pt-0">
       <div className="w-full max-w-md text-white border-2 border-[#0E464F] rounded-xl p-6 shadow-lg">
         {/* Header */}
-        <div className="flex justify-between items-center mb-2">
-          <h2 className="text-lg font-thin">Ticket Selection</h2>
-          <span className="text-sm text-gray-400 underline underline-offset-6">Step 1/3</span>
-        </div>
+        <Progress title="Ticket Selection" step="Step 1/3" />
         {/* Progress Bar */}
-        <div className="flex flex-row w-full h-2 rounded-full mb-6">
-          <div className="bg-[#24A0B5] h-2 rounded-l-full" style={{ width: '33%' }}></div>
-          <div className="bg-[#0D4149] h-2 rounded-r-full" style={{ width: '67%' }}></div>
-        </div>
+        <ProgressBar progress={[{ done: 33, rem: 67 }]} />
+
         {/* Event Details */}
         <div className="bg-[#09272D] p-4 rounded-xl shadow-xl mb-6">
           <h3 className="text-2xl font-semibold text-center">Techember Fest "25</h3>
@@ -37,25 +47,18 @@ export default function Events() {
             Select Ticket Type:
           </label>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div className="border-2 border-[#197686] rounded-lg p-4 text-left sm:text-center hover:bg-[#2C545B] cursor-pointer">
-              <p className="text-lg font-bold py-2">Free</p>
-              <p className="text-xs text-gray-400">REGULAR ACCESS</p>
-              <p className="text-xs mt-1">20/02</p>
-            </div>
-
-            <div className="border-2 border-[#197686] rounded-lg p-4 text-left sm:text-center hover:bg-[#2C545B] cursor-pointer">
-              <p className="text-lg font-bold py-2">$150</p>
-              <p className="text-xs text-gray-400">VIP ACCESS</p>
-              <p className="text-xs mt-1">20/52</p>
-            </div>
-            <div className="border-2 border-[#197686] rounded-lg p-4 text-left sm:text-center hover:bg-[#2C545B] cursor-pointer">
-              <p className="text-lg font-bold py-2">$150</p>
-              <p className="text-xs text-gray-400">VIP ACCESS</p>
-              <p className="text-xs mt-1">20/52</p>
-            </div>
+            {ticketOptions.map((ticket, index) => (
+              <div
+                key={index}
+                className="border-2 border-[#197686] rounded-lg p-4 text-left sm:text-center hover:bg-[#2C545B] cursor-pointer"
+              >
+                <p className="text-lg font-bold py-2">{ticket.price}</p>
+                <p className="text-xs text-gray-400">{ticket.access}</p>
+                <p className="text-xs mt-1">{ticket.availability}</p>
+              </div>
+            ))}
           </div>
         </div>
-
         {/* Number of Tickets */}
         <div className="mb-6">
           <label className="block text-sm font-medium mb-2" htmlFor="numTickets">
@@ -74,14 +77,7 @@ export default function Events() {
         </div>
 
         {/* Actions */}
-        <div className="flex justify-between">
-          <button className="w-32 lg:w-48 px-4 py-2 text-sm text-gray-400 bg-transparent hover:bg-[#eaf8fb] border-1 border-[#24A0B5] rounded-lg">
-            Cancel
-          </button>
-          <a href="/tickets" className="w-32 px-4 py-2 text-sm text-center text-gray-200 bg-[#24A0B5] hover:bg-[#6ad0e2] rounded-lg">
-            Next
-          </a>
-        </div>
+        <Button buttons={buttonsGroup1} />
       </div>
     </div>
   );

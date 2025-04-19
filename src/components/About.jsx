@@ -1,20 +1,23 @@
+import React from "react";
+import Button from "./common/Button";
+import Progress from "./common/Progress";
+import ProgressBar from './common/ProgressBar'
 import Bar from '../assets/Bar Code.svg';
 
 export default function About() {
+  const buttonsGroup = [
+    { label: "Book Another Ticket", href: "/", variant: "secondary" },
+    { label: "Download Ticket", href: "/", variant: "primary" },
+  ]
   return (
     <div className="min-h-screen flex items-center justify-center bg-[#02191D] px-4 md:px-0 pt-4 md:pt-0">
       <div className="w-full max-w-md  border-2 border-[#0E464F] text-white rounded-lg p-6 shadow-lg">
         {/* Header */}
-        <div className="flex justify-between items-center mb-6">
-          <h2 className="text-lg font-thin">Ready</h2>
-          <span className="text-sm text-gray-400">Step 3/3</span>
-        </div>
+        <Progress title='Ready' step='Step 3/3' />
 
         {/* Progress Bar */}
-        <div className="flex flex-row w-full h-2 rounded-full mb-6">
-          <div className="bg-[#24A0B5] h-2 rounded-l-full" style={{ width: '86%' }}></div>
-          <div className="bg-[#0D4149] h-2 rounded-r-full" style={{ width: '14%' }}></div>
-        </div>
+        <ProgressBar progress={[{ done: 86, rem: 14 }]} />
+
         <div className="text-center mb-6">
           <h2 className="text-xl font-semibold mb-2">Your Ticket is Booked!</h2>
           <p className="text-sm text-gray-400">
@@ -130,14 +133,8 @@ export default function About() {
         </div>
 
         {/* Action Buttons */}
-        <div className="flex justify-between">
-          <a href="/" className="lg:w-48 px-4 py-2 text-sm text-gray-400 bg-transparent hover:bg-[#eaf8fb] border-1 border-[#24A0B5] rounded-lg">
-            Book Another Ticket
-          </a>
-          <a href="/" className="px-4 py-2 text-sm text-center text-gray-200 bg-[#24A0B5] hover:bg-[#6ad0e2] rounded-lg">
-            Download Ticket
-          </a>
-        </div>
+        <Button buttons={buttonsGroup} />
+
       </div>
     </div>
   );
