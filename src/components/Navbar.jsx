@@ -4,7 +4,7 @@ import logo from '../assets/logo.png'
 const navigation = [
     { name: 'Events', href: '/', current: true },
     { name: 'My Tickets', href: '/tickets', current: false },
-    { name: 'About Project', href: '/about', current: false },
+    { name: 'About Project', href: '/details', current: false },
 ];
 
 function classNames(...classes) {

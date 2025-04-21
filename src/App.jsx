@@ -1,9 +1,9 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Navbar from './components/Navbar';
 import Events from './components/Events'
+import Details from './components/Details'
 import Tickets from './components/Tickets'
-import About from './components/About'
 
 function Footer() {
   return (
@@ -14,15 +14,15 @@ function Footer() {
 }
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <Navbar />
       <Routes>
         <Route path="/" element={<Events />} />
+        <Route path="/details" element={<Details />} />
         <Route path="/tickets" element={<Tickets />} />
-        <Route path="/about" element={<About />} />
       </Routes>
       <Footer />
-    </Router>
+    </BrowserRouter>
   );
 }
 
